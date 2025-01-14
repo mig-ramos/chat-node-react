@@ -1,12 +1,17 @@
+import { useState } from "react";
 import "./App.css";
 import Chat from "./components/Chat/Chat";
 import Join from "./components/Join/Join";
 
 function App() {
+  const [chatVisibility, setChatVisibility] = useState(false);
   return (
     <div className="App">
-      <Join />
-      <Chat />
+      {chatVisibility ? (
+        <Chat />
+      ) : (
+        <Join setChatVisibility={setChatVisibility} />
+      )}
     </div>
   );
 }

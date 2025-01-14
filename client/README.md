@@ -3,6 +3,7 @@
 ## Instalações iniciais
 
 - npm install
+- npm i socket.io-client
 
 ### Para rodar
 
